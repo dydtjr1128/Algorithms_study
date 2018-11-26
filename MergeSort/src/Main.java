@@ -1,4 +1,6 @@
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 public class Main {
     static BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -11,7 +13,7 @@ public class Main {
         printArray(array);
 
         long startTime = System.currentTimeMillis();
-        insertionSort(array, true);//true : ascending
+        mergeSort(array, true);//true : ascending
         long endTime = System.currentTimeMillis();
 
         printArray(array);
@@ -28,17 +30,7 @@ public class Main {
     }
 
 
-    private static void insertionSort(int[] array, final boolean isAscending) {
-        int i, j;
-        for (i = 1; i < array.length; i++) {
-            int key = array[i];
-            for (j = i - 1; j >= 0 && array[j] > key; j--) {
-                if (isAscending) {
-                    array[j + 1] = array[j];
-                } else {
+    private static void mergeSort(int[] array, final boolean isAscending) {
 
-                }
-            }
-        }
     }
 }
