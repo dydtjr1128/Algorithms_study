@@ -23,7 +23,7 @@ public class Main {
 
     private static void printArray(int[] array) throws IOException {
         for (int i = 0; i < (array.length > PRINT_NUM ? PRINT_NUM : array.length); i++)
-            writer.write(array[i] + " ");
+            writer.write(array[i] + " o");
         writer.write("\n");
     }
 
@@ -32,13 +32,17 @@ public class Main {
         int i, j;
         for (i = 1; i < array.length; i++) {
             int key = array[i];
-            for (j = i - 1; j >= 0 && array[j] > key; j--) {
-                if (isAscending) {
+            if (isAscending) {
+                for (j = i - 1; j >= 0 && array[j] > key; j--) {
                     array[j + 1] = array[j];
-                } else {
-
+                }
+            } else {
+                for (j = i - 1; j >= 0 && array[j] < key; j--) {
+                    array[j + 1] = array[j];
                 }
             }
+            array[j + 1] = key;
+
         }
     }
 }
