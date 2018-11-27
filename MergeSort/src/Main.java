@@ -35,10 +35,9 @@ public class Main {
     }
 
     private static void mergeSort(int[] array, int start, int end, final boolean isAscending) {
-
-
+        int mid;
         if (start < end) {
-            int mid = (start + end) / 2;
+            mid = (start + end) / 2;
             mergeSort(array, start, mid, isAscending);
             mergeSort(array, mid + 1, end, isAscending);
             merge(array, 0, mid, array.length);
