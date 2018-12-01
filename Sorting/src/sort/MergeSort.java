@@ -1,3 +1,5 @@
+package sort;
+
 import java.io.IOException;
 
 public class MergeSort extends Sort {

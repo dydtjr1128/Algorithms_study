@@ -1,3 +1,7 @@
+import sort.BubbleSort;
+import sort.InsertionSort;
+import sort.MergeSort;
+
 import java.io.IOException;
 
 public class Main {
@@ -6,12 +10,13 @@ public class Main {
         int array[] = RandomArray.makeRandomArray(ARRAY_NUM);
         int temp[] = array.clone();
 
-        new BubbleSort().sort(temp,true);
+        new BubbleSort().sort(temp, true);
 
         temp = array.clone();
-        new InsertionSort().sort(temp,true);
+        new InsertionSort().sort(temp, true);
 
         temp = array.clone();
-        new MergeSort().sort(temp,true);
+        new MergeSort().sort(temp, true);
+
     }
 }
