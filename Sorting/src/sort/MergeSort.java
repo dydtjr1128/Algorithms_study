@@ -19,20 +19,29 @@ public class MergeSort extends Sort {
             mid = (start + end) / 2;
             mergeSort(array, start, mid, isAscending);
             mergeSort(array, mid + 1, end, isAscending);
-            merge(array, start, mid, end);
+            merge(array, start, mid, end, isAscending);
         }
     }
 
-    private void merge(int[] array, int start, int mid, int end) {
+    private void merge(int[] array, int start, int mid, int end, boolean isAscending) {
         int i, j, k, l;
         i = start;
         j = mid + 1;
         k = start;
-        while (i <= mid && j <= end) {
-            if (array[i] <= array[j])
-                tempArray[k++] = array[i++];
-            else
-                tempArray[k++] = array[j++];
+        if (isAscending) {
+            while (i <= mid && j <= end) {
+                if (array[i] <= array[j])
+                    tempArray[k++] = array[i++];
+                else
+                    tempArray[k++] = array[j++];
+            }
+        } else {
+            while (i <= mid && j <= end) {
+                if (array[i] > array[j])
+                    tempArray[k++] = array[i++];
+                else
+                    tempArray[k++] = array[j++];
+            }
         }
 
         if (i > mid) {
@@ -45,6 +54,6 @@ public class MergeSort extends Sort {
 
         /*for (l = start; l <= end; l++)
             array[l] = tempArray[l];*/
-        System.arraycopy(tempArray,start,array,start,end-start+1);
+        System.arraycopy(tempArray, start, array, start, end - start + 1);
     }
 }
