@@ -43,7 +43,8 @@ public class MergeSort extends Sort {
                 tempArray[k++] = array[l];
         }
 
-        for (l = start; l <= end; l++)
-            array[l] = tempArray[l];
+        /*for (l = start; l <= end; l++)
+            array[l] = tempArray[l];*/
+        System.arraycopy(tempArray,start,array,start,end-start+1);
     }
 }
