@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 
 public class Sort {
-    private BufferedWriter writer;
+    protected BufferedWriter writer;
     private final int PRINT_NUM;
     private long startTime;
     private int printCount = 0;
@@ -29,8 +29,8 @@ public class Sort {
             writer.write("after : ");
             writer.flush();
         }
-
-        for (int i = 0; i < (array.length > PRINT_NUM ? PRINT_NUM : array.length); i++)
+        int len = (array.length > PRINT_NUM ? PRINT_NUM : array.length);
+        for (int i = 0; i < len; i++)
             writer.write(array[i] + " ");
         writer.write("\n");
 

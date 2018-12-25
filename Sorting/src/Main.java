@@ -1,17 +1,14 @@
-import sort.BubbleSort;
-import sort.InsertionSort;
-import sort.MergeSort;
-import sort.QuickSort;
+import sort.*;
 
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        final int ARRAY_NUM = 500000;
+        final int ARRAY_NUM = 300000;
         int array[] = RandomArray.makeRandomArray(ARRAY_NUM);
         int temp[] = array.clone();
         final boolean isAscending = true;
-        new BubbleSort().sort(temp, true);
+       /* new BubbleSort().sort(temp, true);*/
 
         temp = array.clone();
         new InsertionSort().sort(temp, isAscending);
@@ -21,5 +18,8 @@ public class Main {
 
         temp = array.clone();
         new QuickSort().sort(temp, isAscending);
+
+        temp = array.clone();
+        new CountingSort().sort(temp, isAscending);
     }
 }
