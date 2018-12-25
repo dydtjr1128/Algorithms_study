@@ -11,10 +11,10 @@ public class Main {
         int array[] = RandomArray.makeRandomArray(ARRAY_NUM);
         int temp[] = array.clone();
         final boolean isAscending = true;
-        //new BubbleSort().sort(temp, true);
+        new BubbleSort().sort(temp, true);
 
         temp = array.clone();
-        //new InsertionSort().sort(temp, isAscending);
+        new InsertionSort().sort(temp, isAscending);
 
         temp = array.clone();
         new MergeSort().sort(temp, isAscending);
