@@ -13,6 +13,7 @@
 
 출처 : http://proscada.ru/ctkbase.en/articles/q3750.html
 
+Counting sort는 빠르지만 숫자 정렬에서만 가능하다는 단점이 있다.
 
 
 
