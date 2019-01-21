@@ -2,6 +2,7 @@
 알고리즘 퍼포먼스 테스트
 
 ## 정렬 알고리즘 테스트 결과
+300,000개의 int형 배열 정렬
 
 ![image](https://user-images.githubusercontent.com/19161231/50416540-97520f00-0864-11e9-8283-173f09afd714.png)
 
